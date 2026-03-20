@@ -1,0 +1,33 @@
+@model Lab_3.Models.Category
+
+@{
+    ViewData["Title"] = "Delete Category";
+}
+
+<div class="container mt-4">
+    <div class="card border-danger">
+        <div class="card-header bg-danger text-white">
+            <h4>Xác nhận xóa danh mục</h4>
+        </div>
+        <div class="card-body">
+            <p class="lead">Bạn có chắc chắn muốn xóa danh mục này không?</p>
+            <dl class="row">
+                <dt class="col-sm-3">Mã danh mục (ID):</dt>
+                <dd class="col-sm-9">@Model.Id</dd>
+
+                <dt class="col-sm-3">Tên danh mục:</dt>
+                <dd class="col-sm-9">@Model.Name</dd>
+            </dl>
+
+            <div class="alert alert-warning">
+                <strong>Lưu ý:</strong> Việc xóa danh mục này có thể ảnh hưởng đến các sản phẩm thuộc danh mục này (tùy vào cấu hình Database của bạn).
+            </div>
+
+            <form asp-action="DeleteConfirmed" method="post">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger">Xác nhận xóa</button>
+                <a asp-action="Index" class="btn btn-secondary">Hủy bỏ</a>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+@model IEnumerable<Lab_3.Models.Product>
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-primary">Cửa Hàng Sản Phẩm</h2>
+        <a asp-action="Add" class="btn btn-primary shadow-sm">
+            <i class="bi bi-plus-circle"></i> Thêm sản phẩm mới
+        </a>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 hover-shadow transition">
+                    <div class="position-relative">
+                        <img src="@(string.IsNullOrEmpty(item.ImageURL) ? "/images/no-image.png" : item.ImageURL)" 
+                             class="card-img-top p-3 rounded" style="height: 200px; object-fit: contain;" alt="@item.Name">
+                        <span class="badge bg-info text-dark position-absolute top-0 end-0 m-3">@item.Category?.Name</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold text-truncate">@item.Name</h5>
+                        <p class="card-text text-success fs-5 fw-bold">@item.Price.ToString("C")</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 d-flex justify-content-between pb-3">
+                        <a asp-action="Display" asp-route-id="@item.Id" class="btn btn-outline-info btn-sm">Chi tiết</a>
+                        <div>
+                            <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-outline-warning btn-sm me-1">Sửa</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm">Xóa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .hover-shadow:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+    }
+    .transition { transition: all 0.3s ease; }
+</style>
