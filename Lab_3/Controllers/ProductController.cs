@@ -6,8 +6,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Lab_3.Controllers 
 {
-    // [Area("Admin")]
-    // [Authorize(Roles = SD.Role_Admin)]
+    [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class ProductController : Controller
     {
         private readonly IProductRespository _productRespository;
