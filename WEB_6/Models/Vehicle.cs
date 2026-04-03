@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace WEB_6.Models;
 
@@ -31,6 +32,7 @@ public class Vehicle
     [Display(Name = "Loại phương tiện")]
     public int VehicleTypeId { get; set; }
     
+    [ValidateNever]
     public VehicleType VehicleType { get; set; } = null!;
 
     [Display(Name = "Hình ảnh vi phạm")]

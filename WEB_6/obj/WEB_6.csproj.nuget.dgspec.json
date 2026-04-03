@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "M:\\HongHoangKhang_2380600974\\WEB_6\\WEB_6.csproj": {}
+    "M:\\HongHoangKhang_2380600974\\TH_LTWEB\\WEB_6\\WEB_6.csproj": {}
   },
   "projects": {
-    "M:\\HongHoangKhang_2380600974\\WEB_6\\WEB_6.csproj": {
+    "M:\\HongHoangKhang_2380600974\\TH_LTWEB\\WEB_6\\WEB_6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\HongHoangKhang_2380600974\\WEB_6\\WEB_6.csproj",
+        "projectUniqueName": "M:\\HongHoangKhang_2380600974\\TH_LTWEB\\WEB_6\\WEB_6.csproj",
         "projectName": "WEB_6",
-        "projectPath": "M:\\HongHoangKhang_2380600974\\WEB_6\\WEB_6.csproj",
+        "projectPath": "M:\\HongHoangKhang_2380600974\\TH_LTWEB\\WEB_6\\WEB_6.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "M:\\HongHoangKhang_2380600974\\WEB_6\\obj\\",
+        "outputPath": "M:\\HongHoangKhang_2380600974\\TH_LTWEB\\WEB_6\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

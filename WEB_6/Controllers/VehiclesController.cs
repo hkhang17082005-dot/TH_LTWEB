@@ -11,10 +11,11 @@ namespace WEB_6.Controllers;
 public class VehiclesController : Controller
 {
     private readonly ApplicationDbContext _context;
-
-    public VehiclesController(ApplicationDbContext context)
+    private readonly IWebHostEnvironment _webHostEnvironment;
+    public VehiclesController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment)
     {
         _context = context;
+        _webHostEnvironment = webHostEnvironment;
     }
 
     // GET: Vehicles - List all vehicles sorted by Id descending
@@ -57,10 +58,33 @@ public class VehiclesController : Controller
     // POST: Vehicles/Create
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(Vehicle vehicle)
+    public async Task<IActionResult> Create(Vehicle vehicle, IFormFile HinhAnhUpload)
     {
         if (ModelState.IsValid)
         {
+            //XỬ LÍ UPLOAD HÌNH ẢNH
+            if (HinhAnhUpload != null && HinhAnhUpload.Length > 0)
+            {
+                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
+                
+                // Nếu thư mục chưa có thì tạo mới
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                // Tạo tên file ngẫu nhiên để không bị trùng lặp
+                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(HinhAnhUpload.FileName);
+                string filePath = Path.Combine(uploadsFolder, fileName);
+
+                // Copy file vào server
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await HinhAnhUpload.CopyToAsync(fileStream);
+                }
+                vehicle.HinhAnh = fileName; 
+            }
+
             vehicle.TrangThai = true;
             _context.Add(vehicle);
             await _context.SaveChangesAsync();
@@ -69,6 +93,19 @@ public class VehiclesController : Controller
         ViewData["VehicleTypeId"] = new SelectList(_context.VehicleTypes, "Id", "Name", vehicle.VehicleTypeId);
         return View(vehicle);
     }
+    //GET: XỬ LÍ PHẢN ÁNH
+    [HttpGet]
+    public async Task<IActionResult> XuLyPhanAnh()
+    {
+        // Lấy danh sách các phương tiện do User gửi lên chưa được duyệt (TrangThai == false)
+        var pendingVehicles = _context.Vehicles
+            .Include(v => v.VehicleType)
+            .Where(v => v.TrangThai == false)
+            .OrderByDescending(v => v.ThoiGianViPham);
+            
+        return View(await pendingVehicles.ToListAsync());
+    }
+
 
     // GET: Vehicles/Edit/5
     [HttpGet]
@@ -94,30 +131,25 @@ public class VehiclesController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(int id, Vehicle vehicle)
     {
-        if (id != vehicle.Id)
-        {
-            return NotFound();
-        }
+        if (id != vehicle.Id) return NotFound();
+
+        ModelState.Remove("VehicleType");
 
         if (ModelState.IsValid)
         {
             try
             {
+                vehicle.TrangThai = true; // Mặc định là True khi Admin duyệt
+
                 _context.Update(vehicle);
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VehicleExists(vehicle.Id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                if (!VehicleExists(vehicle.Id)) return NotFound();
+                else throw;
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(XuLyPhanAnh));
         }
         ViewData["VehicleTypeId"] = new SelectList(_context.VehicleTypes, "Id", "Name", vehicle.VehicleTypeId);
         return View(vehicle);

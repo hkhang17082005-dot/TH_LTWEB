@@ -35,7 +35,7 @@ public class PhanAnhController : Controller
         ModelState.Remove("VehicleType"); // Loại bỏ validation cho trường TrangThai vì nó sẽ được set mặc định trong controller
         if (ModelState.IsValid)
         {
-            vehicle.TrangThai = false; // Mặc định là False khi user gửi
+            vehicle.TrangThai = true; // Mặc định là True khi user gửi
             _context.Add(vehicle);
             await _context.SaveChangesAsync();
 

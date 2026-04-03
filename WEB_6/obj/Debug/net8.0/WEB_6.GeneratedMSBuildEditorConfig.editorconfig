@@ -9,115 +9,119 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WEB_6
 build_property.RootNamespace = WEB_6
-build_property.ProjectDir = M:\HongHoangKhang_2380600974\WEB_6\
+build_property.ProjectDir = M:\HongHoangKhang_2380600974\TH_LTWEB\WEB_6\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = M:\HongHoangKhang_2380600974\WEB_6
+build_property.MSBuildProjectDirectory = M:\HongHoangKhang_2380600974\TH_LTWEB\WEB_6
 build_property._RazorSourceGeneratorDebug = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Areas/Identity/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Areas/Identity/Pages/Account/Login.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Areas/Identity/Pages/Account/Logout.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Areas/Identity/Pages/Account/Register.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Areas/Identity/Pages/Shared/_Layout.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Areas/Identity/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Areas/Identity/Pages/Shared/_ViewStart.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Areas/Identity/Pages/Shared/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcU2hhcmVkXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Areas/Identity/Pages/_ViewImports.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Areas/Identity/Pages/_ViewStart.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/Home/Index.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/Home/Privacy.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/PhanAnh/Create.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/PhanAnh/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhhbkFuaFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/Shared/Error.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/Shared/_ValidationScriptsPartial.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/Vehicles/Create.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/Vehicles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/Vehicles/Delete.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/Vehicles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/Vehicles/Details.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/Vehicles/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/Vehicles/Edit.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/Vehicles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/Vehicles/Index.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/Vehicles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/Vehicles/TraCuu.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/Vehicles/TraCuu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcVHJhQ3V1LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/VehicleTypes/Create.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/Vehicles/XuLyPhanAnh.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcWHVMeVBoYW5BbmguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/VehicleTypes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVR5cGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/VehicleTypes/Delete.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/VehicleTypes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVR5cGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/VehicleTypes/Edit.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/VehicleTypes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVR5cGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/VehicleTypes/Index.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/VehicleTypes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVR5cGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/_ViewImports.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/_ViewStart.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[M:/HongHoangKhang_2380600974/WEB_6/Views/Shared/_Layout.cshtml]
+[M:/HongHoangKhang_2380600974/TH_LTWEB/WEB_6/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1oehxehoev
