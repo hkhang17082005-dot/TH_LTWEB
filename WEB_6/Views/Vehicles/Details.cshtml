@@ -1,0 +1,94 @@
+@model WEB_6.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Chi Tiết Vi Phạm";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1>@ViewData["Title"]</h1>
+            <hr />
+
+            <div class="card">
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">Biển số xe</dt>
+                        <dd class="col-sm-9"><strong>@Model.BienSoXe</strong></dd>
+
+                        <dt class="col-sm-3">Loại phương tiện</dt>
+                        <dd class="col-sm-9">@Model.VehicleType?.Name</dd>
+
+                        <dt class="col-sm-3">Thời gian vi phạm</dt>
+                        <dd class="col-sm-9">@Model.ThoiGianViPham.ToString("dd/MM/yyyy HH:mm")</dd>
+
+                        <dt class="col-sm-3">Nội dung</dt>
+                        <dd class="col-sm-9">@Model.NoiDung</dd>
+
+                        <dt class="col-sm-3">Trạng thái</dt>
+                        <dd class="col-sm-9">
+                            @if (Model.TrangThai)
+                            {
+                                <span class="badge bg-success">Đã xử lý</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-warning">Chưa xử lý</span>
+                            }
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            @if (Model.VehicleImages != null && Model.VehicleImages.Any())
+            {
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">Hình ảnh vi phạm (@Model.VehicleImages.Count)</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            @foreach (var image in Model.VehicleImages)
+                            {
+                                <div class="col-md-4 mb-3">
+                                    <a href="~/images/@image.ImagePath" target="_blank" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage('~/images/@image.ImagePath')">
+                                        <img src="~/images/@image.ImagePath" alt="Hình ảnh vi phạm" class="img-fluid rounded" style="max-width: 100%; height: 200px; object-fit: cover;" />
+                                    </a>
+                                    <small class="text-muted d-block mt-2">@image.UploadedDate.ToString("dd/MM/yyyy HH:mm")</small>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <div class="mt-4">
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Sửa</a>
+                <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal để xem ảnh lớn -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Xem hình ảnh</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" alt="Hình ảnh" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function setModalImage(imagePath) {
+            document.getElementById('modalImage').src = imagePath;
+        }
+    </script>
+}

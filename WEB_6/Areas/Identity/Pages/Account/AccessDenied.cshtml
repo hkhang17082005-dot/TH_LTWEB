@@ -1,0 +1,19 @@
+@page
+@namespace WEB_6.Areas.Identity.Pages.Account
+@model AccessDeniedModel
+
+@{
+    ViewData["Title"] = "Truy cập bị từ chối";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="alert alert-danger" role="alert">
+                <h1>@ViewData["Title"]</h1>
+                <p>Bạn không có quyền truy cập vào trang này.</p>
+                <a href="@Url.Content("~/")" class="btn btn-primary">Quay lại trang chủ</a>
+            </div>
+        </div>
+    </div>
+</div>

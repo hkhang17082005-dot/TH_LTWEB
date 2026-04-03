@@ -1,0 +1,65 @@
+@model WEB_6.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Sửa Vi Phạm";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1>@ViewData["Title"]</h1>
+            <hr />
+
+            <form asp-action="Edit" asp-route-id="@Model.Id">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <input type="hidden" asp-for="Id" />
+
+                <div class="form-group mb-3">
+                    <label asp-for="BienSoXe" class="form-label"></label>
+                    <input asp-for="BienSoXe" class="form-control" />
+                    <span asp-validation-for="BienSoXe" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="VehicleTypeId" class="form-label"></label>
+                    <select asp-for="VehicleTypeId" asp-items="@(ViewData["VehicleTypeId"] as SelectList)" class="form-select"></select>
+                    <span asp-validation-for="VehicleTypeId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="ThoiGianViPham" class="form-label"></label>
+                    <input asp-for="ThoiGianViPham" class="form-control" type="datetime-local" />
+                    <span asp-validation-for="ThoiGianViPham" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="NoiDung" class="form-label"></label>
+                    <textarea asp-for="NoiDung" class="form-control" rows="5"></textarea>
+                    <span asp-validation-for="NoiDung" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="TrangThai" class="form-label"></label>
+                    <div class="form-check">
+                        <input type="checkbox" asp-for="TrangThai" class="form-check-input" />
+                        <label class="form-check-label" for="TrangThai">
+                            Đã xử lý
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Cập nhật</button>
+                    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

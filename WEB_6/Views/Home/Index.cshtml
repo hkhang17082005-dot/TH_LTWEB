@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+<div class="jumbotron bg-light p-5 rounded-lg m-3">
+    <h1 class="display-4">Hệ thống quản lý vi phạm giao thông</h1>
+    <p class="lead">Đây là hệ thống để báo cáo, tra cứu và quản lý các vi phạm giao thông</p>
+    <hr class="my-4">
+    <p>Bạn có thể:</p>
+    <ul>
+        <li><strong>Tra cứu vi phạm:</strong> Nhập biển số xe để kiểm tra các vi phạm ghi nhận</li>
+        @if (User.Identity?.IsAuthenticated == true && User.IsInRole("User"))
+        {
+            <li><strong>Phản ánh vi phạm:</strong> Gửi báo cáo về các vi phạm mà bạn chứng kiến</li>
+        }
+        @if (User.Identity?.IsAuthenticated == true && User.IsInRole("Admin"))
+        {
+            <li><strong>Quản lý vi phạm:</strong> Duyệt và xác nhận các báo cáo vi phạm</li>
+        }
+    </ul>
+    <p class="mt-4">
+        @if (!User.Identity?.IsAuthenticated == true)
+        {
+            <a class="btn btn-primary btn-lg" href="@Url.Action("Login", "Account", new { area = "Identity" })" role="button">Đăng nhập ngay</a>
+            <a class="btn btn-success btn-lg ms-2" href="@Url.Action("Register", "Account", new { area = "Identity" })" role="button">Đăng kí</a>
+        }
+    </p>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Tra cứu Vi phạm</h5>
+                <p class="card-text">Kiểm tra các vi phạm giao thông bằng biển số xe</p>
+                <a href="@Url.Action("TraCuu", "Vehicles")" class="btn btn-primary">Tra cứu</a>
+            </div>
+        </div>
+    </div>
+    @if (User.Identity?.IsAuthenticated == true && User.IsInRole("User"))
+    {
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Phản ánh Vi phạm</h5>
+                    <p class="card-text">Gửi báo cáo về các vi phạm giao thông bạn chứng kiến</p>
+                    <a href="@Url.Action("Create", "PhanAnh")" class="btn btn-success">Phản ánh</a>
+                </div>
+            </div>
+        </div>
+    }
+    @if (User.Identity?.IsAuthenticated == true && User.IsInRole("Admin"))
+    {
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Quản lý Vi phạm</h5>
+                    <p class="card-text">Duyệt và xác nhận các báo cáo vi phạm</p>
+                    <a href="@Url.Action("Index", "Vehicles")" class="btn btn-warning">Quản lý</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
